@@ -2,7 +2,7 @@
 
 # Projeto de Análise e Gerenciamento de Filmes
 
-### Integrantes
+## Integrantes
 * Antonia Taynara Maciel Paulo
 * Arley Kevin Teixeira Rabelo
 * Francisca Josiana dos Santos Oliveira
@@ -22,7 +22,7 @@ O projeto utiliza os seguintes conceitos, conforme exigido pela atividade:
 * **Closure**: Para criar funções que "memorizam" variáveis de seu escopo externo.
 * **Função de Alta Ordem**: Para receber ou retornar outras funções.
 
-* ## Requisitos
+## Requisitos
 
 ### Requisitos Funcionais
 * Exibição dos dados dos filmes.
