@@ -36,13 +36,13 @@ O projeto utiliza os seguintes conceitos, conforme exigido pela atividade:
 * **Manutenibilidade**: O código é organizado, com funções bem definidas.
 * **Uso de Conceitos Funcionais**: O projeto demonstra a aplicação de `lambda`, `list comprehension`, `closure` e funções de alta ordem.
 
-* ## Como Executar
+## Como Executar
 
 1.  Certifique-se de ter o Python instalado em sua máquina.
 2.  Clone este repositório para o seu ambiente local.
 3.  Abra a pasta do projeto no seu editor de código (por exemplo, Visual Studio Code).
 4.  Execute o arquivo principal para ver as funcionalidades e os testes em ação.
 
- # Créditos
+# Créditos
 
 Este projeto foi desenvolvido como parte de uma atividade avaliativa para a disciplina de Programação Funcional.
