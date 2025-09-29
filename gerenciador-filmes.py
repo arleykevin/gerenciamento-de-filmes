@@ -11,6 +11,22 @@ filmes = [
     {"titulo": "Forrest Gump", "ano": 1994, "genero": "Drama", "nota": 8.8},
 ]
 
+# Função para coletar dados de um novo filme a partir do usuário
+def coleta_dados_novo_filme():
+    """Coleta os dados do usuário para um novo filme e retorna um dicionário."""
+    print("\n--- Adicionar Novo Filme ---")
+    titulo = input("Título do filme: ")
+    ano = int(input("Ano de lançamento: "))
+    genero = input("Gênero: ")
+    nota = float(input("Nota (de 0 a 10): "))
+    
+    return {
+        "titulo": titulo,
+        "ano": ano,
+        "genero": genero,
+        "nota": nota
+    }
+
 # 1. Função com List Comprehension
 def filtra_por_nota_minima(lista_de_filmes, nota_minima):
     """
