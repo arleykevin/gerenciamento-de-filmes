@@ -1,7 +1,6 @@
 # PROJETO: Análise e Gerenciamento de Filmes
 
 # Lista de filmes (dados iniciais)
-# Adicione ou remova filmes para testar suas funções.
 filmes = [
     {"titulo": "A Origem", "ano": 2010, "genero": "Ficção Científica", "nota": 9.0},
     {"titulo": "Pulp Fiction", "ano": 1994, "genero": "Crime", "nota": 8.9},
@@ -9,6 +8,12 @@ filmes = [
     {"titulo": "O Poderoso Chefão", "ano": 1972, "genero": "Crime", "nota": 9.2},
     {"titulo": "A Chegada", "ano": 2016, "genero": "Ficção Científica", "nota": 7.9},
     {"titulo": "Forrest Gump", "ano": 1994, "genero": "Drama", "nota": 8.8},
+    {"titulo": "O Cavaleiro das Trevas", "ano": 2008, "genero": "Ação", "nota": 9.0},
+    {"titulo": "A Vida é Bela", "ano": 1997, "genero": "Comédia", "nota": 8.6},
+    {"titulo": "Matrix", "ano": 1999, "genero": "Ficção Científica", "nota": 8.7},
+    {"titulo": "O Senhor dos Anéis: O Retorno do Rei", "ano": 2003, "genero": "Fantasia", "nota": 9.0},
+    {"titulo": "Star Wars: Episódio V - O Império Contra-Ataca", "ano": 1980, "genero": "Ficção Científica", "nota": 8.7},
+    {"titulo": "A Origem dos Guardiões", "ano": 2012, "genero": "Animação", "nota": 7.3},
 ]
 
 # Função para coletar dados de um novo filme a partir do usuário
@@ -28,6 +33,8 @@ def coleta_dados_novo_filme():
     }
 
 # 1. Função com List Comprehension
+# Mapeamento do requisito: Filtro por nota mínima
+# Este requisito será implementado na função 'filtra_por_nota_minima' usando list comprehension.
 def filtra_por_nota_minima(lista_de_filmes, nota_minima):
     """
     Filtra filmes que possuem nota igual ou superior à nota_minima.
@@ -39,6 +46,8 @@ def filtra_por_nota_minima(lista_de_filmes, nota_minima):
     return filmes_filtrados
 
 # 2. Função de Alta Ordem e Função Lambda
+# Mapeamento do requisito: Filtro por gênero
+# Este requisito será implementado na função 'filtra_por_genero' usando a função de alta ordem 'filter' e uma lambda.
 def filtra_por_genero(lista_de_filmes, genero_alvo):
     """
     Filtra filmes que pertencem ao gênero_alvo.
@@ -48,6 +57,8 @@ def filtra_por_genero(lista_de_filmes, genero_alvo):
     return filmes_filtrados
 
 # 3. Closure
+# Mapeamento do requisito: Criação de um filtro customizado
+# Este requisito será implementado na função 'gerar_filtro_por_nota' que retorna uma closure.
 def gerar_filtro_por_nota(nota_minima):
     """
     Cria e retorna uma função (Closure) que já possui a nota_minima 'memorizada'.
@@ -57,11 +68,14 @@ def gerar_filtro_por_nota(nota_minima):
     return filtro_customizado
 
 # 4. Função Adicional: Adiciona um novo filme de forma funcional
+# Mapeamento do requisito: Cadastro de filmes
+# Este requisito será implementado na função 'cadastra_filme'.
 def cadastra_filme(lista_atual, novo_filme):
     """Adiciona um novo filme à lista de forma funcional (imutável)."""
     return lista_atual + [novo_filme]
 
 # 5. Função Adicional: Exibe os filmes
+# Mapeamento do requisito: Exibição de dados
 def exibe_filmes(lista_de_filmes):
     """Exibe os filmes de forma legível no console."""
     if not lista_de_filmes:
@@ -76,16 +90,16 @@ def exibe_filmes(lista_de_filmes):
         print(f"Nota: {filme['nota']}")
         print("-" * 20)
 
-# --- EXECUÇÃO DO PROGRAMA E CASOS DE TESTE ---
-# Este é o ponto onde você deve colocar seus casos de teste.
-if __name__ == "__main__":
-    print("Iniciando o programa de Análise de Filmes...")
+# --- EXECUÇÃO DO PROGRAMA ---
 
-    # Imprimindo a lista inicial de filmes
-    print("\n--- Lista Original de Filmes ---")
+if __name__ == "__main__":
+
+    # Teste para mostrar que a lista original não mudou
+    print("--- Lista de filmes ORIGINAL (não modificada) ---")
     exibe_filmes(filmes)
+
     
-    # Exemplo de uso das funções que construímos juntos
+    print("Iniciando o programa de Análise de Filmes...")
     
     # Testando a list comprehension (filtra por nota mínima)
     print("\n1. Testando filtro de filmes com nota >= 8.8:")
@@ -109,7 +123,3 @@ if __name__ == "__main__":
     filmes_atualizado = cadastra_filme(filmes, novo_filme)
     print("--- Nova lista de filmes (original não foi modificada) ---")
     exibe_filmes(filmes_atualizado)
-    
-    # Teste para mostrar que a lista original não mudou
-    print("--- Lista de filmes ORIGINAL (não modificada) ---")
-    exibe_filmes(filmes)
