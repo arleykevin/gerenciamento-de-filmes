@@ -3,11 +3,12 @@
 # Projeto de Análise e Gerenciamento de Filmes
 
 ## Integrantes
-* Antonia Taynara Maciel Paulo
-* Arley Kevin Teixeira Rabelo
-* Francisca Josiana dos Santos Oliveira
-* Gabriella Castro de Moura Moreira
-* Paulo Vitor Temoteo Araújo
+ANTONIA TAYNARA MACIEL PAULO / 2323818
+ARLEY KEVIN TEIXEIRA RABELO / 2326223
+FRANCISCA JOSIANA DOS SANTOS OLIVEIRA / 2323835
+GABRIELLA CASTRO DE MOURA MOREIRA / 2326182
+PAULO VITOR TEMOTEO ARAÚJO / 2326178
+
 
 ## Descrição
 
